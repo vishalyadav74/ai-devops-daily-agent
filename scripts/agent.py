@@ -5,8 +5,8 @@ from groq import Groq
 import random
 
 # ================= CONFIG =================
-GROQ_API_KEY = "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"
-GITHUB_TOKEN = "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"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO_NAME = "vishalyadav74/ai-devops-daily-agent"
 
 # ================= INIT =================
