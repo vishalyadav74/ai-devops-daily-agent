@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from github import Github
+from github import Github, Auth
 from groq import Groq
 import random
 
@@ -11,7 +11,10 @@ REPO_NAME = "vishalyadav74/ai-devops-daily-agent"
 
 # ================= INIT =================
 client = Groq(api_key=GROQ_API_KEY)
-g = Github(GITHUB_TOKEN)
+
+auth = Auth.Token(GITHUB_TOKEN)
+g = Github(auth=auth)
+
 repo = g.get_repo(REPO_NAME)
 
 # ================= PATH SETUP =================

@@ -25,5 +25,5 @@ jobs:
       - name: Run agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN_MY }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/agent.py
