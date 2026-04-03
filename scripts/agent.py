@@ -56,7 +56,7 @@ response = client.chat.completions.create(
 content = response.choices[0].message.content
 
 # ================= STEP 3: FILE =================
-date = datetime.now().strftime("%Y-%m-%d")
+date = datetime.now().strftime("%Y-%m-%d-%H-%M")
 file_path = f"content/{date}.md"
 
 # ================= STEP 4: PUSH =================
